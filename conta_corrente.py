@@ -3,7 +3,6 @@ class Conta:
     banc_cont = {}
     def __init__(self, correntista):
         self.correntista = correntista
-        #self.numero_conta
         self.gerador_numero_conta()
         self.banco_de_contas()
 
@@ -17,8 +16,6 @@ class Conta:
         
         self.banc_cont.setdefault(sum(self.numero_conta[0:]),{'Nome': None, 'Saldo': 0})
         self.banc_cont[sum(self.numero_conta[0:])] = {'Nome': self.correntista, 'Saldo': 0}
-        #return print(f'Seu número de conta é: {sum(self.numero_conta[0:])}')
-    
     
     def numeroDaConta(self):    
         return print(f'Seu número de conta é: {sum(self.numero_conta[0:])}', end='\n')
